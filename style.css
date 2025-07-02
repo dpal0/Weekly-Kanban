@@ -1,0 +1,334 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1e1e1e;
+            color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* App Container */
+        .app-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 300px;
+            background: #2d2d30;
+            border-right: 1px solid #3e3e42;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .app-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid #3e3e42;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .app-icon {
+            width: 24px;
+            height: 24px;
+            background: #000000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .app-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* User Profile */
+        .user-profile {
+            padding: 16px 20px;
+            border-bottom: 1px solid #3e3e42;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .user-info {
+            flex: 1;
+        }
+
+        .user-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Search */
+        .search-container {
+            padding: 16px 20px;
+            border-bottom: 1px solid #3e3e42;
+        }
+
+        .search-input {
+            width: 100%;
+            background: #3e3e42;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .search-input::placeholder {
+            color: #888888;
+        }
+
+        /* Navigation */
+        .nav-menu {
+            flex: 1;
+            padding: 8px 0;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .nav-item:hover {
+            background: #3e3e42;
+        }
+
+        .nav-item.active {
+            background: #0078d4;
+        }
+
+        .nav-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .nav-label {
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .nav-count {
+            background: #484848;
+            border-radius: 10px;
+            padding: 2px 8px;
+            font-size: 12px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, #efb1e0 0%, #764ba2 100%);
+            position: relative;
+        }
+
+        .main-content::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><path d="M0,400 C300,350 600,380 900,320 C1000,300 1100,280 1200,260 L1200,400 Z" fill="%23000000" fill-opacity="0.1"/></svg>') no-repeat center bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        /* Content Header */
+        .content-header {
+            padding: 24px 32px;
+            z-index: 1;
+        }
+
+        .content-title {
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 4px;
+        }
+
+        .content-date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .header-actions {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .header-btn {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+
+        .header-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Tasks Container */
+        .tasks-container {
+            flex: 1;
+            padding: 0 32px 32px;
+            overflow-y: auto;
+            z-index: 1;
+        }
+
+        /* Task Item */
+        .task-item {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .task-item:hover {
+            background: rgba(0, 0, 0, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .task-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin-top: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .task-checkbox:hover {
+            border-color: #ffffff;
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-title {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+
+        .task-category {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .task-star {
+            width: 20px;
+            height: 20px;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .task-star:hover {
+            color: #ffd700;
+        }
+
+        /* Add Task Button */
+        .add-task-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 16px 0;
+            cursor: pointer;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .add-task-btn:hover {
+            color: #ffffff;
+        }
+
+        .add-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        /* New List Button */
+        .new-list-btn {
+            margin: 16px 20px;
+            padding: 12px;
+            background: none;
+            border: 1px solid #3e3e42;
+            border-radius: 4px;
+            color: #cccccc;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .new-list-btn:hover {
+            background: #3e3e42;
+            color: #ffffff;
+        }
+  

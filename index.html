@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weekly Kanban</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- App Header -->
+            <div class="app-header">
+                <div class="app-icon">✓</div>
+                <div class="app-title">The Weekly Kanban</div>
+            </div>
+
+            <!-- User Profile -->
+            <div class="user-profile">
+                <div class="user-avatar">DP</div>
+                <div class="user-info">
+                    <div class="user-name">Diksha Pal</div>
+                </div>
+            </div> 
+
+            <!-- Search -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+
+            <!-- Navigation Menu -->
+            <div class="nav-menu">
+                <div class="nav-item active">
+                    <div class="nav-icon">☀️</div>
+                    <div class="nav-label">My Day</div>
+                   <!-- <div class="nav-count">4</div>-->
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">⭐</div>
+                    <div class="nav-label">Important</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">📅</div>
+                    <div class="nav-label">Planned</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">👤</div>
+                    <div class="nav-label">Assigned to me</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">📋</div>
+                    <div class="nav-label">Tasks</div>
+                    <!--<div class="nav-count">4</div>-->
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">🔥</div>
+                    <div class="nav-label">Getting started</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">🛒</div>
+                    <div class="nav-label">Groceries</div>
+                    <!--<div class="nav-count">2</div>-->
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">📝</div>
+                    <div class="nav-label">Untitled list</div>
+                </div>
+            </div>
+
+            <!-- New List Button -->
+            <button class="new-list-btn">
+                <span>+</span>
+                New list
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Content Header -->
+            <div class="content-header">
+                <h1 class="content-title">My Day</h1>
+                <div class="content-date">Wednesday, July 2</div>
+                <div class="header-actions">
+                    <button class="header-btn">📊</button>
+                    <button class="header-btn">💡</button>
+                    <button class="header-btn">⋯</button>
+                </div>
+            </div>
+
+            <!-- Tasks Container -->
+            <div class="tasks-container">
+                <!-- Task Items -->
+                <div class="task-item">
+                    <div class="task-checkbox"></div>
+                    <div class="task-content">
+                        <div class="task-title"> Task1 </div>
+                        <div class="task-category">Tasks</div>
+                    </div>
+                    <div class="task-star">☆</div>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-checkbox"></div>
+                    <div class="task-content">
+                        <div class="task-title">Task2</div>
+                        <div class="task-category">Tasks</div>
+                    </div>
+                    <div class="task-star">☆</div>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-checkbox"></div>
+                    <div class="task-content">
+                        <div class="task-title">Task 3</div>
+                        <div class="task-category">Tasks</div>
+                    </div>
+                    <div class="task-star">☆</div>
+                </div>
+
+                <div class="task-item">
+                    <div class="task-checkbox"></div>
+                    <div class="task-content">
+                        <div class="task-title">Task 4</div>
+                        <div class="task-category">Tasks</div>
+                    </div>
+                    <div class="task-star">☆</div>
+                </div>
+
+                <!-- Add Task Button -->
+                <button class="add-task-btn">
+                    <div class="add-icon">+</div>
+                    Add a task
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
